@@ -1,0 +1,39 @@
+===================================================================================
+WEB FRAMEWORKS INTRODUCTION
+===================================================================================
+
+This tutorial serves as a basis to learn the key components that make up most
+web apps , we'll use a very thin python framework to kick off and cover the following topics:
+
+1. Setting up a basic application server.
+2. Creating a basic route.
+3. Building a basic template parser.
+4. Showing and parsing an HTML Form.
+5. Build a login form to authenticate users.
+6. Session management to protect pages.
+
+
+===================================================================================
+INSTALLING AND RUNNING THE APP
+===================================================================================
+
+1. mkvirtualenv appserver
+2. workon appserver
+3. pip install -r requirments.txt
+4. gunicorn server:app
+5. visit: http://127.0.0.1:8000
+
+
+===================================================================================
+ROUTES
+===================================================================================
+   
+   =====================                                     =================
+   ROUTE URL                                                 FUNCTION EXECTUED
+   =====================                                     =================
+1. http://127.0.0.1:8000/                                    startpage()
+2. http://127.0.0.1:8000/form                                hello_form_generator()
+3. http://127.0.0.1:8000/generate        [FORM POST]         generated_message()
+4. http://127.0.0.1:8000/login                               show_login_form()
+5. http://127.0.0.1:8000/authenticate    [FORM POST]         authenticate()
+6. http://127.0.0.1:8000/members         [SECURE PAGE]       member_dashboard()
